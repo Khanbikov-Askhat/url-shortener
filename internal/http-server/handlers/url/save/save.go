@@ -35,7 +35,7 @@ type URLSaver interface {
 	SaveUrl(urlToSave string, alias string) (int64, error)
 }
 
-//go:generate go run github.com/vektra/mockery/v3@latest generate --name=URLSaver
+//go:generate go run github.com/vektra/mockery/v2@latest --name=URLSaver
 func New(log *slog.Logger, urlSaver URLSaver) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		const op = "handlers.url.save.New"

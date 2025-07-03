@@ -1,0 +1,54 @@
+=== RUN   TestSaveHandler
+=== RUN   TestSaveHandler/Success
+    mock.go:351: 
+        assert: mock: I don't know what to return because the method call was unexpected.
+        	Either do Mock.On("SaveUrl").Return(...) first, or remove the SaveUrl() call.
+        	This method was unexpected:
+        		SaveUrl(string,string)
+        		0: "https://google.com"
+        		1: "test_alias"
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+    URLSaver.go:49: FAIL:	SaveURL(string,mock.anythingOfTypeArgument)
+        		at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:68]
+    URLSaver.go:49: FAIL: 0 out of 1 expectation(s) were met.
+        	The code you are testing needs to make 1 more call(s).
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:49 /usr/local/go/src/testing/testing.go:1211 /usr/local/go/src/testing/testing.go:1445 /usr/local/go/src/testing/testing.go:1786 /usr/local/go/src/runtime/panic.go:636 /usr/local/go/src/testing/testing.go:1041 /home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+=== RUN   TestSaveHandler/Empty_alias
+    mock.go:351: 
+        assert: mock: I don't know what to return because the method call was unexpected.
+        	Either do Mock.On("SaveUrl").Return(...) first, or remove the SaveUrl() call.
+        	This method was unexpected:
+        		SaveUrl(string,string)
+        		0: "https://google.com"
+        		1: "W4W0XH"
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+    URLSaver.go:49: FAIL:	SaveURL(string,mock.anythingOfTypeArgument)
+        		at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:68]
+    URLSaver.go:49: FAIL: 0 out of 1 expectation(s) were met.
+        	The code you are testing needs to make 1 more call(s).
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:49 /usr/local/go/src/testing/testing.go:1211 /usr/local/go/src/testing/testing.go:1445 /usr/local/go/src/testing/testing.go:1786 /usr/local/go/src/runtime/panic.go:636 /usr/local/go/src/testing/testing.go:1041 /home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+=== RUN   TestSaveHandler/Empty_URL
+=== RUN   TestSaveHandler/Invalid_URL
+=== RUN   TestSaveHandler/SaveURL_Error
+    mock.go:351: 
+        assert: mock: I don't know what to return because the method call was unexpected.
+        	Either do Mock.On("SaveUrl").Return(...) first, or remove the SaveUrl() call.
+        	This method was unexpected:
+        		SaveUrl(string,string)
+        		0: "https://google.com"
+        		1: "test_alias"
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+    URLSaver.go:49: FAIL:	SaveURL(string,mock.anythingOfTypeArgument)
+        		at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:68]
+    URLSaver.go:49: FAIL: 0 out of 1 expectation(s) were met.
+        	The code you are testing needs to make 1 more call(s).
+        	at: [/home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:49 /usr/local/go/src/testing/testing.go:1211 /usr/local/go/src/testing/testing.go:1445 /usr/local/go/src/testing/testing.go:1786 /usr/local/go/src/runtime/panic.go:636 /usr/local/go/src/testing/testing.go:1041 /home/askhat/url-shortener/internal/http-server/handlers/url/save/mocks/URLSaver.go:14 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save.go:76 /usr/local/go/src/net/http/server.go:2294 /home/askhat/url-shortener/internal/http-server/handlers/url/save/save_test.go:81]
+--- FAIL: TestSaveHandler (0.00s)
+    --- FAIL: TestSaveHandler/Success (0.00s)
+    --- FAIL: TestSaveHandler/Empty_alias (0.00s)
+    --- PASS: TestSaveHandler/Empty_URL (0.00s)
+    --- PASS: TestSaveHandler/Invalid_URL (0.00s)
+    --- FAIL: TestSaveHandler/SaveURL_Error (0.00s)
+FAIL
+FAIL	command-line-arguments	0.006s
+FAIL
